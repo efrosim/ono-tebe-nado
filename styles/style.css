@@ -1,4 +1,5 @@
 /* Шапка */
+
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
@@ -6,6 +7,7 @@
     padding: 92px 50px 92px 51px;
     font-size: 18px;
     font-weight: 400;
+    column-gap: 0;
 }
 
 .header__menu {
@@ -15,6 +17,10 @@
 .header__links-list {
     display: flex;
     gap: 32px;
+    list-style: circle;
+}
+
+.header__links-list-item {
     list-style: circle;
 }
 
@@ -38,6 +44,7 @@
 
 .header__logo-image {
     width: 100%;
+    height: auto;
 }
 
 .address {
@@ -51,6 +58,7 @@
 }
 
 /* Обложка */
+
 .cover {
     position: relative;
     padding: 165px 50px 50px;
@@ -115,6 +123,7 @@
     font-weight: 400;
     line-height: 28px;
     word-spacing: 18px;
+    text-transform: none;
 }
 
 .bet-button {
@@ -130,6 +139,7 @@
 }
 
 /* Секция с лотами */
+
 .lots {
     padding: 180px 50px 180px;
 }
@@ -160,6 +170,7 @@
     display: block;
     height: 100%;
     text-decoration: none;
+    color: inherit;
 }
 
 .card {
@@ -210,14 +221,17 @@
     font-weight: 400;
     border-bottom: 1px solid currentColor;
     text-decoration: none;
+    color: inherit;
 }
 
 /* Секция "Об аукционе" */
+
 .about {
     display: grid;
     grid-template-columns: 430px 1fr;
     gap: 25px;
     padding: 0 50px 180px;
+    align-items: start;
 }
 
 .about__column {
@@ -238,6 +252,7 @@
 
 .about__logo-image {
     width: 148px;
+    height: auto;
 }
 
 .about__title {
@@ -258,12 +273,18 @@
 }
 
 /* Футер */
+
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 50px 90px;
     font-size: 18px;
     font-weight: 400;
+    align-items: start;
+}
+
+.footer .address {
+    justify-self: start;
 }
 
 .footer__menu {
@@ -275,9 +296,14 @@
     text-align: center;
 }
 
+.footer__menu-list-item {
+    /* семантически оставлено для будущих модификаторов */
+}
+
 .footer__menu-link {
     border-bottom: 1px solid currentColor;
     text-decoration: none;
+    color: inherit;
 }
 
 .footer__menu-link_active {
@@ -289,6 +315,10 @@
     justify-content: end;
     gap: 48px;
     list-style: none;
+}
+
+.footer__social-link {
+    display: block;
 }
 
 .footer__social-icon {
